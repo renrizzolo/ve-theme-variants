@@ -1,0 +1,56 @@
+{
+  "name": "ve-theme-variants",
+  "version": "0.0.1",
+  "description": "Simplifies creation of theme based token variants for Vanilla Extract",
+  "author": "Ren Rizzolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renrizzolo/ve-theme-variants/issues"
+  },
+  "homepage": "https://github.com/renrizzolo/ve-theme-variants#readme",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "types": "./index.ts",
+  "files": [
+    "/dist"
+  ],
+  "keywords": [
+    "vanilla-extract"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "tsup": {
+    "entry": [
+      "./index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "minify": true,
+    "dts": true
+  },
+  "devDependencies": {
+    "@vanilla-extract/css": "^1.13.0",
+    "@vanilla-extract/vite-plugin": "^3.9.0"
+  },
+  "peerDependencies": {
+    "@vanilla-extract/css": "^1.13.0"
+  },
+  "dependencies": {
+    "just-kebab-case": "^4.2.0"
+  }
+}

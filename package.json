@@ -1,0 +1,24 @@
+{
+  "name": "ve-theme-variants-repo",
+  "version": "0.0.0",
+  "description": "Vanilla Extract Theme Variants",
+  "author": "Ren Rizzolo",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test -w=ve-theme-variants",
+    "dev": "npm run dev -w=example-next",
+    "build": "npm run build  -w=ve-theme-variants",
+    "version": "npm version && npm install --lockfile-only",
+    "release": "npm build && npm publish"
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "vitest": "^0.34.3"
+  }
+}
