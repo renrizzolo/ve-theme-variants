@@ -1,7 +1,7 @@
 import "@vanilla-extract/css/disableRuntimeStyles";
 
 import { describe, expect, test } from "vitest";
-import { createThemeVariants } from "../createThemeVariants";
+import { createThemeVariants } from "../createThemeVariants.css";
 import {
   themeVariantWithSelectors,
   themeVariants,

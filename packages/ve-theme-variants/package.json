@@ -12,7 +12,7 @@
   "main": "dist/index.js",
   "types": "./index.ts",
   "files": [
-    "/dist"
+    "dist"
   ],
   "keywords": [
     "vanilla-extract"
@@ -40,7 +40,7 @@
     "splitting": false,
     "sourcemap": true,
     "clean": true,
-    "minify": true,
+    "minify": false,
     "dts": true
   },
   "devDependencies": {

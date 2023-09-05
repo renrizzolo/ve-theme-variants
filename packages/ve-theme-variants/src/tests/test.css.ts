@@ -1,8 +1,8 @@
-import { NullableStyleRule, NullableTokens } from "../../dist";
+import { NullableStyleRule } from "../../dist";
 import {
   ThemedStyleVariants,
   createThemeVariants,
-} from "../createThemeVariants";
+} from "../createThemeVariants.css";
 
 export const themeVariants = createThemeVariants(
   {
