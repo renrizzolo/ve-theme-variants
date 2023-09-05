@@ -10,6 +10,53 @@ npm i ve-theme-variants
 
 See the [Next example app](/apps/example-next/) for a full example.
 
+## What is it?
+
+These functions just abstract away a bit of the theming paradigm I use with Vanilla Extract.
+
+You define component level variants for use in `recipe()`, `stylevariants()` or `style()` in the theme directly. They don't have to by actual style rules but that's how I like to do it, so I can just spread the vars into style without any manipulation.
+
+Here's a pseudo example of how you might create a Surface component with this method
+
+```ts
+// surfaceVariants.ts
+export const surfaceVariants = {
+  light: {
+    surface0: { backgroundColor: color["zinc-100"] },
+    surface1: { backgroundColor: color["zinc-200"] },
+    surface2: { backgroundColor: color["zinc-300"] },
+  },
+  dark: {
+    surface0: { backgroundColor: color["zinc-950"] },
+    surface1: { backgroundColor: color["zinc-900"] },
+    surface2: { backgroundColor: color["zinc-800"] },
+  },
+};
+```
+
+```ts
+// theme.css.ts
+export const { themeVars } = createThemeVariants(surfaceVariantsContract, [
+  surfaceVariants,
+]);
+```
+
+```ts
+// surface.css.ts
+export const surface = recipe({
+  variants: {
+    level: {
+      0: style(themeVars.surface0),
+      1: style(themeVars.surface1),
+      2: style(themeVars.surface2),
+    },
+  },
+  defaultVariants: {
+    level: 0,
+  },
+});
+```
+
 ## createThemeVariants()
 
 ```tsx
@@ -93,7 +140,7 @@ By default `createThemeVariants` maps the variable names to kebab-case (using `j
 You can pass a `mapFn` as the 3rd argument if you want to customize this
 
 ```tsx
-  createThemeVariants({...}, [...],  (_value, path) => path.join("_").replace(/[&:,.()]+/g, "")
+  createThemeVariants(contract, tokens,  (_value, path) => path.join("_").replace(/[&:,.()]+/g, "")
 ```
 
 See [Formatting the variable names](https://vanilla-extract.style/documentation/global-api/create-global-theme-contract/#formatting-the-variable-names)
