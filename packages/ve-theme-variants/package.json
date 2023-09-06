@@ -1,6 +1,6 @@
 {
   "name": "ve-theme-variants",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simplifies creation of theme based token variants for Vanilla Extract",
   "author": "Ren Rizzolo",
   "license": "MIT",
