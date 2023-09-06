@@ -15,7 +15,8 @@
     "dev": "npm run dev -w=example-next",
     "build": "npm run build -w=ve-theme-variants",
     "version": "changeset version && npm install --lockfile-only",
-    "release": "npm run build && changeset publish"
+    "release": "npm run build && changeset publish",
+    "postpublish": "git push --follow-tags"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
