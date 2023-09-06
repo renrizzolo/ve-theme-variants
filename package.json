@@ -14,10 +14,14 @@
     "test": "npm run test -w=ve-theme-variants",
     "dev": "npm run dev -w=example-next",
     "build": "npm run build -w=ve-theme-variants",
-    "release": "npm run build && npm publish -w=ve-theme-variants"
+    "version": "changeset version && npm install --lockfile-only",
+    "release": "npm run build && changeset publish"
   },
   "devDependencies": {
     "tsup": "^7.2.0",
     "vitest": "^0.34.3"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.2"
   }
 }
