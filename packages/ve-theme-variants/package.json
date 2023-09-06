@@ -1,6 +1,6 @@
 {
   "name": "ve-theme-variants",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simplifies creation of theme based token variants for Vanilla Extract",
   "author": "Ren Rizzolo",
   "license": "MIT",
@@ -27,7 +27,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "test": "vitest"
+    "test": "vitest",
+    "version": "npm install --lockfile-only"
   },
   "tsup": {
     "entry": [
