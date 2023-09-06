@@ -13,9 +13,9 @@
   "scripts": {
     "test": "npm run test -w=ve-theme-variants",
     "dev": "npm run dev -w=example-next",
-    "build": "npm run build  -w=ve-theme-variants",
+    "build": "npm run build -w=ve-theme-variants",
     "version": "npm version && npm install --lockfile-only",
-    "release": "npm build && npm publish"
+    "release": "npm run build && npm publish -w=ve-theme-variants"
   },
   "devDependencies": {
     "tsup": "^7.2.0",
