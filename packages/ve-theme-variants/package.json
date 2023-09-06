@@ -53,5 +53,8 @@
   },
   "dependencies": {
     "just-kebab-case": "^4.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
